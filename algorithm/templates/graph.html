@@ -1,0 +1,19 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %}algorithm{% endblock %}
+
+{% block body %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="submit">
+    </form>
+    <div class="row">
+        <div class="col-6">
+            <img class="img-fluid" src="{% static 'img/function_graph.png' %}" alt="">
+        </div>
+        <div class="col-6">
+            <img class="img-fluid" src="{% static 'img/mistake_graph.png' %}" alt="">
+        </div>
+    </div>
+{% endblock %}
